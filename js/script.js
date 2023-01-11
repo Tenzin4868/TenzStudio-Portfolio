@@ -90,3 +90,14 @@ const nav = document.querySelector(".nav"),
                     allSection[i].classList.toggle("open");
                 }
             }
+
+
+            function openTarget() {
+                var hash = location.hash.substring(1);
+                console.log(hash);
+                if(hash) var page = document.getElementById(hash);
+                if(page && page.tagName.toLowerCase() === 'section') page.classList.add("active");
+              }
+              window.addEventListener('load', openTarget);
+              openTarget();
+              
